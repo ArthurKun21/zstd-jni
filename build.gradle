@@ -58,7 +58,7 @@ repositories {
 
 dependencies {
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test:runner:1.6.2'
 }
 
 public class ZstdVersionGenerator {
