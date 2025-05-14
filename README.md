@@ -133,7 +133,6 @@ to add the repository in your build.gradle, e.g.:
 
     allprojects {
         repositories {
-            jcenter()
             mavenCentral()
         }
     }
