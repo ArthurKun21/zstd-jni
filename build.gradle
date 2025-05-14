@@ -1,9 +1,4 @@
 buildscript {
-    repositories {
-        google()
-        mavenCentral()
-        gradlePluginPortal()
-    }
     dependencies {
         classpath 'com.android.tools.build:gradle:8.10.0'
     }
@@ -17,11 +12,6 @@ plugins {
 version = rootProject.file('version').text.trim()
 
 def generatedSrcDir = new File(buildDir, "generated/main/java/");
-
-repositories {
-    google()
-    mavenCentral()
-}
 
 android {
     namespace "com.github.luben.zstd.jni"
