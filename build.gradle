@@ -7,6 +7,8 @@ def generatedSrcDir = new File(buildDir, "generated/main/java/");
 buildscript {
     repositories {
         google()
+        mavenCentral()
+        gradlePluginPortal()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:8.10.0'
