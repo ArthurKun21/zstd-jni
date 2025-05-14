@@ -1,5 +1,10 @@
 name: "CI qemu cross"
-on: [push, pull_request]
+on: 
+    push:
+        branches:
+        - master
+        - main
+    pull_request:
 jobs:
     qemu-cross:
         strategy:
