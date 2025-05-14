@@ -24,6 +24,7 @@ repositories {
 }
 
 android {
+    namespace "com.github.luben.zstd.jni"
     compileSdkVersion 35
     ndkVersion "28.1.13356709"
 
