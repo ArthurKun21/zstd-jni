@@ -52,6 +52,13 @@ android {
     sourceSets {
         main.java.srcDirs += generatedSrcDir
     }
+
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
 }
 
 dependencies {
@@ -72,6 +79,20 @@ public class ZstdVersionGenerator {
 		}
 		finally {
 			outputStream.close();
+		}
+	}
+}
+
+afterEvaluate {
+	publishing {
+		publications {
+			standard(MavenPublication) {
+				from components.findByName('release')
+
+				groupId 'com.github.luben'
+				artifactId 'zstd-jni'
+				version version
+			}
 		}
 	}
 }
