@@ -1,4 +1,7 @@
-apply plugin: 'com.android.library'
+plugins {
+    id 'com.android.library'
+    `maven-publish`
+}
 
 version = rootProject.file('version').text.trim()
 
